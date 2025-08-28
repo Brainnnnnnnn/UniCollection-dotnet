@@ -1,5 +1,7 @@
 using SqlSugar;
 using UniCollection.Models;
+using UniCollection.Repositories;
+using UniCollection.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,10 @@ builder.Services.AddSingleton<ISqlSugarClient>(sp =>
     return db;
 });
 
+
+// Category系列
+builder.Services.AddScoped<CateoryRepository>();
+builder.Services.AddScoped<CategoryService>();
 
 
 var app = builder.Build();

@@ -3,7 +3,7 @@ using SqlSugar;
 namespace UniCollection.Models;
 
 [SugarTable("Resource")]
-public class Resource
+public class Resource : IEntity
 {
     [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
     public int Id { get; set; }
