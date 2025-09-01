@@ -34,6 +34,10 @@ builder.Services.AddSingleton<ISqlSugarClient>(sp =>
 builder.Services.AddScoped<CateoryRepository>();
 builder.Services.AddScoped<CategoryService>();
 
+// Resource系列
+builder.Services.AddScoped<ResourceRepository>();
+builder.Services.AddScoped<ResourceService>();
+
 
 var app = builder.Build();
 
